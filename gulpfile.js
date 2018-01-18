@@ -23,8 +23,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const browser = require('browser-sync').create();
 const uglify = require('gulp-uglify');
-//const imagemin = require('gulp-imagemin');
 const gulpUtil = require('gulp-util');
+const image = require('gulp-image');
 const livereload = require('gulp-livereload');
 const rename = require('gulp-rename');
 var PATHS = {
@@ -34,14 +34,13 @@ var PATHS = {
     buildassets: [
     'build/css/',
     'build/fonts/',
-    'build/js/'
+    'build/js/',
+    'build/img/'
   ]
 };
-
 var autoprefixerOptions = {
     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
-
 // Load all tasks
 ////////////////////////////////////////////////////////////
 //
@@ -79,30 +78,29 @@ gulp.task('sass', function () {
         .pipe(browser.stream());
 });
 
+///////////////////////////////////////////////////
+/// Image tasks
+/////////
 
-////////////////////////////////////////////////////////////
+gulp.task('image', function () {
+    return gulp.src('./img/*')
+        .pipe(image())
+        .pipe(gulp.dest("build/img"));
+});
 //
 // Build tasks
 //
 ////////////////////////////////////////////////////////////
 gulp.task('build', [
-                'javascript',
-                'sass',
-                'copy'
-            ]);
+    'javascript',
+    'sass',
+    'copy'
+]);
 ////////////////////////////////////////////////////////////
 //
 // Default task
 //
 ////////////////////////////////////////////////////////////
-/*
-
-gulp.task('default', () =>
-    gulp.src('./src/img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('build/img'))
-);
-*/
 gulp.task('default', function () {
     gulp.watch("./src/js/*.js", ['javascript']);
     gulp.watch("./src/scss/*.scss", ['sass']);
