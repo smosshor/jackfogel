@@ -1,0 +1,40 @@
+body {
+    position: relative;
+    background: white;
+}
+
+.introSection {
+    text-align: center;
+    .jumbotron {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+#darkroom {
+    background-image: url('/Users/Sarah/Documents/GitHub/jfogel/src/img/darkroom/IMG_2303.JPG');
+    transition: ease-in .5s;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+}
+
+#breathe {
+    background-image: url('/Users/Sarah/Documents/GitHub/jfogel/src/img/breathe/IMG_7658.jpg');
+    transition: ease-in .5s;
+
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+#pavilion {
+    background-image: url('/Users/Sarah/Documents/GitHub/jfogel/src/img/aqua pavillion /Aqua_Pavilion_Rendering.jpg');
+    background-size: cover;
+    transition: ease-in .5s;
+
+    background-attachment: fixed;
+    height: 100vh;
+}

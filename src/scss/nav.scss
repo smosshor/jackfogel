@@ -1,0 +1,27 @@
+.bg-light {
+    background: white;
+}
+
+#sidebar-wrapper {
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    transition: all .5s ease;
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-grid;
+        margin-top: 40vh;
+        border-right: 2px solid #fff;
+        padding: 20px;
+        li {
+            a,
+            p {
+                color: #fff;
+                float: left;
+            }
+        }
+    }
+}
