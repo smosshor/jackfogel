@@ -35,7 +35,7 @@ var PATHS = {
     'build/css/',
     'build/fonts/',
     'build/js/',
-    'build/img/',
+    'build/img/'
   ]
 };
 var autoprefixerOptions = {
@@ -83,7 +83,7 @@ gulp.task('sass', function () {
 /////////
 
 gulp.task('image', function () {
-    return gulp.src(['./img/*'])
+    return gulp.src(["./img/*"])
         .pipe(img())
         .pipe(gulp.dest("build/img"));
 });
