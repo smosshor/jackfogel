@@ -11,29 +11,24 @@ body {
     }
 }
 
+.section {
+    transition: ease-in .5s;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
 
-#darkroom {
+.darkroom {
     background: url('https://smosshor.github.io/jackfogel/src/img/darkroom/IMG_2303.JPG');
-    transition: ease-in .5s;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-
 }
 
-#breathe {
+.breathe {
     background: url('https://smosshor.github.io/jackfogel/src/img/breathe/IMG_7658.jpg');
-    transition: ease-in .5s;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
 }
 
 
-#pavilion {
+.pavilion {
     background: url('https://smosshor.github.io/jackfogel/src/img/aqua/Aqua_Pavilion_Rendering.jpg');
-    background-size: cover;
-    transition: ease-in .5s;
-    background-attachment: fixed;
-    height: 100vh;
 }
