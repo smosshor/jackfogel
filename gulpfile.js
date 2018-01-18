@@ -23,6 +23,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const browser = require('browser-sync').create();
 const uglify = require('gulp-uglify');
+//const imagemin = require('gulp-imagemin');
 const gulpUtil = require('gulp-util');
 const livereload = require('gulp-livereload');
 const rename = require('gulp-rename');
@@ -37,18 +38,10 @@ var PATHS = {
   ]
 };
 
-const gulp = require(‘gulp’);
-const imagemin = require(‘gulp - imagemin’);
-
-gulp.task(‘
-    default’, () =>
-    gulp.src(‘src / img’)
-    .pipe(imagemin())
-    .pipe(gulp.dest(‘dist / images’))
-);
 var autoprefixerOptions = {
     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
+
 // Load all tasks
 ////////////////////////////////////////////////////////////
 //
@@ -86,32 +79,31 @@ gulp.task('sass', function () {
         .pipe(browser.stream());
 });
 
-const gulp = require(‘gulp’);
-const imagemin = require(‘gulp - imagemin’);
 
-gulp.task(‘
-        default’, () =>
-        gulp.src(‘src / images
-            /*’)
-                    .pipe(imagemin())
-                    .pipe(gulp.dest(‘dist/images’))
-            );
-            ////////////////////////////////////////////////////////////
-            //
-            // Build tasks
-            //
-            ////////////////////////////////////////////////////////////
-            gulp.task('build', [
+////////////////////////////////////////////////////////////
+//
+// Build tasks
+//
+////////////////////////////////////////////////////////////
+gulp.task('build', [
                 'javascript',
                 'sass',
                 'copy'
             ]);
-            ////////////////////////////////////////////////////////////
-            //
-            // Default task
-            //
-            ////////////////////////////////////////////////////////////
-            gulp.task('default', function () {
-                gulp.watch("./src/js/*.js", ['javascript']);
-                gulp.watch("./src/scss/*.scss", ['sass']);
-            });
+////////////////////////////////////////////////////////////
+//
+// Default task
+//
+////////////////////////////////////////////////////////////
+/*
+
+gulp.task('default', () =>
+    gulp.src('./src/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img'))
+);
+*/
+gulp.task('default', function () {
+    gulp.watch("./src/js/*.js", ['javascript']);
+    gulp.watch("./src/scss/*.scss", ['sass']);
+});

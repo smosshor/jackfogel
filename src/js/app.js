@@ -18,6 +18,9 @@ $(document).ready(function () {
 
 
 
+
+
+
 /*Function to control clicking on a card
     $('#cards a').click(function () {
         e.preventDefault();
