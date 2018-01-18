@@ -35,7 +35,7 @@ var PATHS = {
     'build/css/',
     'build/fonts/',
     'build/js/',
-    'build/img/'
+    'build/img/',
   ]
 };
 var autoprefixerOptions = {
@@ -67,7 +67,7 @@ gulp.task('javascript', function () {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
     return gulp.src([
-            "./src/scss/main.scss"
+         "./src/scss/main.scss"
         ])
         .pipe(sass({
             includePaths: PATHS.sass
@@ -83,8 +83,8 @@ gulp.task('sass', function () {
 /////////
 
 gulp.task('image', function () {
-    return gulp.src('./img/*')
-        .pipe(image())
+    return gulp.src(['./img/*'])
+        .pipe(img())
         .pipe(gulp.dest("build/img"));
 });
 //
@@ -94,8 +94,10 @@ gulp.task('image', function () {
 gulp.task('build', [
     'javascript',
     'sass',
-    'copy'
+    'image'
 ]);
+
+
 ////////////////////////////////////////////////////////////
 //
 // Default task
@@ -104,4 +106,6 @@ gulp.task('build', [
 gulp.task('default', function () {
     gulp.watch("./src/js/*.js", ['javascript']);
     gulp.watch("./src/scss/*.scss", ['sass']);
+    gulp.watch("./src/img/*.img", ['image']);
+
 });
