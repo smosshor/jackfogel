@@ -107,5 +107,4 @@ gulp.task('default', function () {
     gulp.watch("./src/js/*.js", ['javascript']);
     gulp.watch("./src/scss/*.scss", ['sass']);
     gulp.watch("./src/img/*.img", ['image']);
-
 });

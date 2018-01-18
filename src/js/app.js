@@ -5,21 +5,21 @@
 
 */
 
-$(document).ready(function () {
+$(document).ready(function () {});
 
-    $('.portfolioItem1').css("background", red);
+$(document).scroll(function () {
+    var scrollPosition = $(window).scrollTop();
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.portfolioItem1').css("background", red);
-        }
-    });
+    if (scrollPosition >= 1000) {
+        $('.card-description a h2').text('breathe');
+
+    } else if (scrollPosition > 500 && scrollPosition <= 1000) {
+        $('.card-description a h2').text('pavillion');
+
+    } else if (scrollPosition <= 500) {
+        $('.card-description a h2').text('darkroom');
+    }
 });
-
-
-
-
-
 
 /*Function to control clicking on a card
     $('#cards a').click(function () {
