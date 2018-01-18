@@ -13,7 +13,7 @@ body {
 
 
 #darkroom {
-    background-image: url('src/img/darkroom/IMG_2303.JPG');
+    background: url('src/img/darkroom/IMG_2303.JPG');
     transition: ease-in .5s;
     background-size: cover;
     background-attachment: fixed;
@@ -22,7 +22,7 @@ body {
 }
 
 #breathe {
-    background-image: url('src/img/breathe/IMG_7658.jpg');
+    background: url('src/img/breathe/IMG_7658.jpg');
     transition: ease-in .5s;
     background-size: cover;
     background-attachment: fixed;
@@ -31,7 +31,7 @@ body {
 
 
 #pavilion {
-    background-image: url('src/img/aquapavillion /Aqua_Pavilion_Rendering.jpg');
+    background: url('src/img/aqua/Aqua_Pavilion_Rendering.jpg');
     background-size: cover;
     transition: ease-in .5s;
     background-attachment: fixed;
