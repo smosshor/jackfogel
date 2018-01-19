@@ -1,28 +1,27 @@
 .card-image {
-    height: auto;
-    width: 100%;
-    padding: 50px;
+	height: auto;
+	width: 100%;
+	padding: 50px;
 
 }
 
 .card-description {
-    margin-top: 300px;
-    position: fixed;
-    h5,
-    h4,
-    p,
-    i,
-    a {
-        color: white;
-    }
-    a {
-        text-decoration: underline;
-        text-underline-position: below;
-    }
+	bottom: 20px;
+	position: fixed;
+	h5,
+	h4,
+	p,
+	i,
+	a {
+		color: white;
+	}
+	a {
+		text-underline-position: below;
+	}
 
 }
 
 .card-section:hover .overlay {
-    background: pink;
-    transition: .9s;
+	background: pink;
+	transition: .9s;
 }

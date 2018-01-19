@@ -1,36 +1,44 @@
 body {
-    position: relative;
-    background: white;
+	position: relative;
+	background: white;
 }
 
 .introSection {
-    text-align: center;
-    .jumbotron {
-        width: 60%;
-        margin-left: 20%;
-    }
+	text-align: center;
+	.jumbotron {
+		width: 60%;
+		margin-left: 20%;
+	}
 }
 
 #section {
-    transition: ease-in .5s;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+	transition: ease-in .5s;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
 }
 
 .darkroom {
-    background: url('https://smosshor.github.io/jackfogel/src/img/darkroom/IMG_2303.JPG');
+	background: url('https://smosshor.github.io/jackfogel/src/img/darkroom/IMG_2303.JPG');
 }
 
 .breathe {
-    background: url('https://smosshor.github.io/jackfogel/src/img/breathe/IMG_7658.jpg');
+	background: url('https://smosshor.github.io/jackfogel/src/img/breathe/IMG_7658.jpg');
 }
 
-
 .pavilion {
-    background: url('https://smosshor.github.io/jackfogel/src/img/aqua/Aqua_Pavilion_Rendering.jpg');
+	background: url('https://smosshor.github.io/jackfogel/src/img/aqua/Aqua_Pavilion_Rendering.jpg');
+}
+
+.long-rect {
+	height: 100%;
+	width: 10px;
+	background: white;
+	float: right;
+	margin-left: 350px;
+	position: fixed;
 }
 
 /*pre-loader

@@ -8,18 +8,25 @@
 $(document).ready(function () {});
 
 $(document).scroll(function () {
-    var scrollPosition = $(window).scrollTop();
+	var scrollPosition = $(window).scrollTop();
+	if (scrollPosition >= 1400) {
+		$('.card-description a h1').text('breathe');
+		$('#breathe').addClass('active');
+		$('#pavilion').removeClass('active');
 
-    if (scrollPosition >= 1000) {
-        $('.card-description a h2').text('breathe');
+	} else if (scrollPosition > 600 && scrollPosition <= 1400) {
+		$('.card-description a h1').text('pavilion');
+		$('#pavilion').addClass('active');
+		$('#darkroom').removeClass('active');
+		$('#breathe').removeClass('active');
 
-    } else if (scrollPosition > 500 && scrollPosition <= 1000) {
-        $('.card-description a h2').text('pavillion');
-
-    } else if (scrollPosition <= 500) {
-        $('.card-description a h2').text('darkroom');
-    }
+	} else if (scrollPosition <= 600) {
+		$('.card-description a h1').text('darkroom');
+		$('#darkroom').addClass('active');
+		$('#pavilion').removeClass('active');
+	}
 });
+
 
 /*Function to control clicking on a card
     $('#cards a').click(function () {
