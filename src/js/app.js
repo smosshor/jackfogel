@@ -1,11 +1,15 @@
-/*Needed steps: 
-- User clicks a given card  
-- load content based on url and save into variable
-- 
+$(document).ready(function () {
 
-*/
+});
 
-$(document).ready(function () {});
+$(window).on('load', function () { // makes sure the whole site is loaded 
+	$('#status').fadeOut(); // will first fade out the loading animation 
+	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+	$('body').delay(350).css({
+		'overflow': 'visible'
+	});
+})
+
 
 $(document).scroll(function () {
 	var scrollPosition = $(window).scrollTop();
@@ -26,6 +30,8 @@ $(document).scroll(function () {
 		$('#pavilion').removeClass('active');
 	}
 });
+
+
 
 
 /*Function to control clicking on a card
